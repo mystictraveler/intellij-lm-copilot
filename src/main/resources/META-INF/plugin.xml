@@ -1,0 +1,15 @@
+<idea-plugin>
+    <id>com.intellij.lm.copilot</id>
+    <name>LM API — GitHub Copilot Provider</name>
+    <vendor>intellij-lm</vendor>
+    <description>Bridges GitHub Copilot into the IntelliJ Language Model API.
+        Any plugin using LmService can use Copilot models without depending on Copilot directly.</description>
+
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.lm</depends>
+    <depends>com.github.copilot</depends>
+
+    <extensions defaultExtensionNs="com.intellij.lm">
+        <provider implementation="com.intellij.lm.copilot.CopilotLmProvider"/>
+    </extensions>
+</idea-plugin>
