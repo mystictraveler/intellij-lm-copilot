@@ -19,6 +19,12 @@ jobs:
           java-version: '17'
           cache: 'gradle'
 
+      - name: Clone and build LM API dependency
+        run: |
+          git clone https://github.com/mystictraveler/intellij-lm-api.git ../intellij-lm-api
+          cd ../intellij-lm-api
+          ./gradlew buildPlugin
+
       - name: Build plugin
         run: ./gradlew buildPlugin
 
