@@ -21,7 +21,7 @@ dependencies {
         localPlugin(file("../intellij-lm-api/build/distributions/intellij-lm-api-0.0.1.zip"))
         instrumentationTools()
     }
-    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+    compileOnly("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
 }
 
 kotlin {
